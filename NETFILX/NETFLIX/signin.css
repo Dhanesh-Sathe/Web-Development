@@ -1,0 +1,178 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:sans-serif;
+}
+
+body{
+    background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)) , url('Images/back.jpg');
+}
+
+.logo{
+    height: auto;
+    width: 180px;
+    margin-left: 140px;
+    margin-top: -10px;
+}
+
+.logo img{
+    height: 100%;
+    width: 100%;
+    opacity: 1;
+}
+
+.main{
+    margin: 0 34%;
+    position: absolute;
+    width: 400px;
+    height: 600px;
+    background-color: rgba(0, 0, 0, 0.75) ;
+    padding: 30px;
+    margin-bottom: 20px;
+}
+
+.main h3{
+    text-align: left;
+    padding: 30px 30px 15px 30px;
+    color: white;
+    font-size: 32px;
+    font-family:sans-serif;
+    margin-bottom: 10px;
+}
+
+.sign-up{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* margin; */
+}
+
+.sign-up input{
+    padding: 15px;
+    margin: 20px;
+    width: 300px;
+    font-size: 15px;
+    background: none;
+    outline: none;
+    color: #fff;
+    border: 1px solid #ffffff7a;
+    border-radius: 3px;
+}
+
+.sign-up input::placeholder{
+    color: #ffffffb0;
+}
+
+#email{
+    margin: 0px;
+}
+
+button{
+    width: 330px;
+    padding: 8px 0;
+    font-size: 16px;
+    font-weight: 500;
+    background-color: rgb(236, 18, 18);
+    color: #fff;
+    border: 2px solid rgb(236, 18, 18);
+    border-radius: 5px;
+}
+
+#forget-pass{
+    text-decoration: none;
+    color: #fff;
+    font-size: 15px;
+    margin: 20px;
+    font-weight: 300;
+}
+
+#forget-pass:hover{
+    text-decoration: underline;
+}
+
+.info label{
+    color: #fff;
+    font-size: 16px;
+    padding: 35px;
+    font-weight: 100;
+}
+
+input[type="checkbox"]{
+    width: 16px;
+    height: 16px;
+    border: 2px solid #ffffff7a;
+    background-color: black;
+    outline: none;
+}
+
+.info h4{
+    color: #ffffffb0;
+    padding: 20px 35px;
+    font-weight: 100;
+}
+
+.info a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 550;
+}
+
+.info a:hover{
+    text-decoration: underline;
+}
+
+.info p{
+    color: #ffffff70;
+    font-size: 13px;
+    padding: 0 35px;
+}
+
+#more{
+    text-decoration: none;
+    color: rgb(72, 72, 255);
+    font-size: 13px;
+    font-weight: 100;
+}
+
+#more:hover{
+    text-decoration: underline;
+}
+
+/* Footer Sectio */
+
+.footer{
+    background-color: rgba(0, 0, 0, 0.75);
+    margin-top: 700px;
+    padding: 90px;
+}
+
+.footer p{
+    font-size: 16px;
+    color: #c8c1c1;
+    margin-bottom: 20px;
+    margin-left: 60px;
+}
+
+.footer p span{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.footer p span:hover{
+    text-decoration: underline;
+}
+
+.footer-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    margin-left: 50px;
+}
+
+.f-property a{
+    color: #c8c1c1;
+    display: block;
+    margin: 10px ;
+}

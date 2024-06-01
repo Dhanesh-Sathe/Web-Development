@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NETFILX</title>
+    <link rel="stylesheet" href="LoginHelp.css">
+</head>
+<body>
+    <header>
+        <div class="nav">
+            <div class="logo">
+                <a href="index.html"><img src="Images/logo.png" alt="" ></a>
+            </div>
+            <div class="signin">
+                <a href="signin.html" class="btn">Sign In</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <form action="#" class="form container">
+            <h1>Forget Email/Password</h1>
+            <p class="ques"">How would you like to reset your password?</p>
+            <div id="ans" class="options">
+                <label for="email_select" class="input"><input type="radio" name="select" id="email_select" value="email" class="option" checked>    Email</label><br>
+                <label for="sms_select" class="input"><input type="radio" name="select" id="sms_select" value="sms" class="option">  Text Message (SMS)</label>
+            </div>
+            <div id="email">
+                <p>We will send you an email with instructions on how to reset your password.</p>
+                <input type="email" name="email" id="@email" placeholder="name@example.com" required>
+                <button class="btn" id="btn-email" onclick="sendEmail()">Email Me</button>
+            </div>
+            <div id="sms">
+                <p>We will text you a verification code to reset your password. Message and data rates may apply.</p>
+                <div class="number">
+                    <select name="tel" id="tel">
+                        <option value="India">+91</option>
+                    </select>
+                    <label for="tel"></label><input type="tel" name="tel" id="tel" placeholder="12345-67890" pattern="[0-9]{5}-[0-9]{5}">
+                </div>
+                <button class="btn" id="btn-sms">Text Me</button>
+            </div>
+            <br>
+            <a href="#" id="forget-email">I can't remember my email address or phone number.</a>
+        </form>
+        
+        <div id="info-end">
+            <p>This page is protected by Google reCAPTCHA to ensure you're<br> not a bot. <span>Learn more.</span></p>
+        </div>
+    </main>
+
+    <div class="footer container">
+        <p>Questions Call <span>000-800-919-1694</span></p>
+        <div class="footer-content">
+            <div class="footer1 f-property">
+                <a href="#">FAQ</a>
+                <a href="#">Cookie Preferences</a>
+            </div>
+
+            <div class="footer2 f-property">
+                <a href="#">Help Center</a>
+                <a href="#">Corporate Information</a>
+            </div>
+
+            <div class="footer3 f-property">
+                <a href="#">Terms of Use</a>
+            </div>
+
+            <div class="footer4 f-property">
+                <a href="#">Privacy</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const email_select = document.getElementById('email_select');
+        const sms_select = document.getElementById('sms_select');
+        const email = document.getElementById('email');
+        const sms = document.getElementById('sms');
+        if(email_select.checked) {
+            email.style.display = 'block';
+            sms.style.display = 'none';
+        }
+        email_select.addEventListener('click', () => {
+            if(email_select.checked) {
+                email.style.display = 'block';
+                sms.style.display = 'none';
+            } else {
+                email.style.display = 'none';
+            }
+        });
+        sms_select.addEventListener('click', () => {
+            if (sms_select.checked) {
+                sms.style.display = 'block';
+                email.style.display = 'none';
+            } else {
+                sms.style.display = 'none';
+            }     
+        });
+
+        function sendEmail() {
+            const email = document.getElementById('@email');
+            let emailBody = `This mail for confurmation!!!`;
+            Email.send({
+            SecureToken : "869409d2-45e1-47b0-a0e4-3894528420fd",
+            To : email.value,
+            From : "sathedhanesh1@gmail.com",
+            Subject : "Email OTP using JavaScript",
+            Body : emailbody,
+            }).then(
+                message => {
+   if (message === "OK") {
+     alert("OTP sent to your email " + email.value);
+
+
+     
+   }
+ }
+            );
+        }
+    </script>
+</body>
+</html>

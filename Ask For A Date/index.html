@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ask For A Date</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div>
+            <h1 class="header_text">Do you want to go with me?</h1>
+        </div>
+        <div class="gif_container">
+            <img 
+            src="https://media.tenor.com/sLkOvbmv4SgAAAAi/tkthao219-bunny.gif" 
+            alt="Cute animated illustration">
+        </div>
+        <div class="buttons">
+            <button class="btn" id="yesButton" onclick="nextPage()">Yes</button>
+            <button class="btn" id="noButton" onmouseover="moveButton()" onclick="moveButton()">No</button>
+        </div>
+    </div>
+    <script>
+        // function nextPage() {
+        //     window.location.href = "index2.html";
+        // }
+
+        // function moveButton() {
+        //     const button = document.getElementById('noButton');
+        //     const x = Math.random() * (window.innerWidth - button.offsetWidth);
+        //     const y = Math.random() * (window.innerHeight - button.offsetHeight);
+        //     button.style.left = x + 'px';
+        //     button.style.top = y + 'px';
+        // }
+        
+            function nextPage() {
+                window.location.href = "index2.html";
+            }
+
+          function moveButton() {
+            var x =
+              Math.random() *
+              (window.innerWidth -
+                document.getElementById("noButton").offsetWidth);
+            var y =
+              Math.random() *
+              (window.innerHeight -
+                document.getElementById("noButton").offsetHeight);
+            document.getElementById("noButton").style.left = `${x}px`;
+            document.getElementById("noButton").style.top = `${y}px`;
+          }
+        
+    </script>
+</body>
+</html>
